@@ -1,0 +1,147 @@
+export type PropertyParameter = {
+  label: string
+  value: string
+}
+
+export type Property = {
+  slug: string
+  image: string
+  alt: string
+  title: string
+  type: string
+  transaction: "Prodej" | "Pronájem"
+  location: string
+  price: string
+  gallery: { src: string; alt: string }[]
+  highlights: string[]
+  parameters: PropertyParameter[]
+  description: string[]
+}
+
+export const properties: Property[] = [
+  {
+    slug: "byt-4kk-praha-krc",
+    image: "/property-apartment-krc.png",
+    alt: "Světlý moderní byt 4+kk v Praze 4 - Krč",
+    title: "Prodej bytu 4+kk, 80 m²",
+    type: "Byt 4+kk",
+    transaction: "Prodej",
+    location: "Praha 4 – Krč, ulice Sládkovičova",
+    price: "10 349 000 Kč",
+    gallery: [
+      { src: "/property-apartment-krc.png", alt: "Prostorný obývací pokoj s velkými okny" },
+      { src: "/property-apartment-krc-2.png", alt: "Moderní plně vybavená kuchyně s ostrůvkem" },
+      { src: "/property-apartment-krc-3.png", alt: "Klidná ložnice s přírodním světlem" },
+      { src: "/property-apartment-krc-4.png", alt: "Designová koupelna s prosklenou sprchou" },
+    ],
+    highlights: [
+      "Kompletní rekonstrukce 2023",
+      "Lodžie s výhledem do zeleně",
+      "Sklep a garážové stání v ceně",
+      "Výborná občanská vybavenost",
+    ],
+    parameters: [
+      { label: "Dispozice", value: "4+kk" },
+      { label: "Užitná plocha", value: "80 m²" },
+      { label: "Plocha lodžie", value: "6 m²" },
+      { label: "Patro", value: "4. z 8" },
+      { label: "Stav objektu", value: "Po rekonstrukci" },
+      { label: "Vlastnictví", value: "Osobní" },
+      { label: "Konstrukce", value: "Panelová, zateplená" },
+      { label: "Energetický štítek", value: "C – úsporná" },
+      { label: "Vytápění", value: "Ústřední dálkové" },
+      { label: "Parkování", value: "Garážové stání" },
+      { label: "Sklep", value: "Ano, 4 m²" },
+      { label: "Výtah", value: "Ano" },
+    ],
+    description: [
+      "Nabízíme k prodeji zrekonstruovaný a velmi světlý byt 4+kk o výměře 80 m² ve vyhledávané lokalitě Praha 4 – Krč. Byt se nachází ve 4. podlaží zatepleného panelového domu s výtahem a prošel v roce 2023 kompletní rekonstrukcí včetně nových rozvodů, podlah a kuchyňské linky.",
+      "Dispozičně byt nabízí prostorný obývací pokoj propojený s moderní kuchyní, tři samostatné pokoje, koupelnu s prosklenou sprchou a samostatné WC. Z obývacího pokoje je přístup na lodžii s klidným výhledem do zeleně vnitrobloku.",
+      "Součástí prodeje je sklepní kóje a garážové stání v domě. V bezprostředním okolí najdete kompletní občanskou vybavenost, mateřské a základní školy, parky a dostupnost do centra je díky metru trasy C velmi rychlá.",
+    ],
+  },
+  {
+    slug: "byt-2kk-praha-vinohrady",
+    image: "/property-apartment-vinohrady.png",
+    alt: "Elegantní byt 2+kk v Praze 2 - Vinohrady",
+    title: "Pronájem bytu 2+kk, 46 m²",
+    type: "Byt 2+kk",
+    transaction: "Pronájem",
+    location: "Praha 2 – Vinohrady, ulice Korunní",
+    price: "21 000 Kč / měsíc",
+    gallery: [
+      { src: "/property-apartment-vinohrady.png", alt: "Stylový obývací prostor s vysokými okny" },
+      { src: "/property-apartment-vinohrady-2.png", alt: "Elegantní kuchyňský kout" },
+      { src: "/property-apartment-vinohrady-3.png", alt: "Útulná ložnice s historickými prvky" },
+    ],
+    highlights: [
+      "Reprezentativní činžovní dům",
+      "Původní historické prvky",
+      "Ihned k nastěhování",
+      "Vinohradská lokalita",
+    ],
+    parameters: [
+      { label: "Dispozice", value: "2+kk" },
+      { label: "Užitná plocha", value: "46 m²" },
+      { label: "Patro", value: "3. z 5" },
+      { label: "Stav objektu", value: "Velmi dobrý" },
+      { label: "Typ pronájmu", value: "Dlouhodobý" },
+      { label: "Konstrukce", value: "Cihlová" },
+      { label: "Energetický štítek", value: "D – méně úsporná" },
+      { label: "Vytápění", value: "Ústřední plynové" },
+      { label: "Vybavení", value: "Zařízený" },
+      { label: "Výtah", value: "Ano" },
+      { label: "Kauce", value: "2 měsíční nájmy" },
+      { label: "Dostupné od", value: "Ihned" },
+    ],
+    description: [
+      "K dlouhodobému pronájmu nabízíme stylový a plně zařízený byt 2+kk o výměře 46 m² v reprezentativním cihlovém činžovním domě na pražských Vinohradech, v ulici Korunní.",
+      "Byt ve 3. podlaží kombinuje původní historické prvky, jako jsou vysoké stropy a špaletová okna, s moderním vybavením. Nabízí obývací pokoj s kuchyňským koutem, oddělenou ložnici a koupelnu s vanou.",
+      "Vinohrady patří mezi nejžádanější rezidenční lokality Prahy. V docházkové vzdálenosti jsou parky, kavárny, obchody i výborné spojení MHD včetně metra trasy A. Byt je k nastěhování ihned.",
+    ],
+  },
+  {
+    slug: "pozemek-kladruby-vlasim",
+    image: "/property-land-kladruby.png",
+    alt: "Stavební pozemek 4190 m² v Kladrubech u Vlašimi",
+    title: "Prodej pozemku 4190 m²",
+    type: "Stavební pozemek",
+    transaction: "Prodej",
+    location: "Kladruby u Vlašimi",
+    price: "3 490 000 Kč",
+    gallery: [
+      { src: "/property-land-kladruby.png", alt: "Letecký pohled na rozlehlý pozemek" },
+      { src: "/property-land-kladruby-2.png", alt: "Pohled ze země na louku s lesem v pozadí" },
+      { src: "/property-land-kladruby-3.png", alt: "Letecký pohled na pozemek v kontextu obce" },
+    ],
+    highlights: [
+      "Rovinatý pozemek jižní orientace",
+      "Inženýrské sítě na hranici",
+      "Územní plán: bydlení",
+      "Klidné venkovské prostředí",
+    ],
+    parameters: [
+      { label: "Druh pozemku", value: "Stavební" },
+      { label: "Celková plocha", value: "4 190 m²" },
+      { label: "Šířka pozemku", value: "cca 40 m" },
+      { label: "Orientace", value: "Jih" },
+      { label: "Terén", value: "Rovinatý" },
+      { label: "Elektřina", value: "Na hranici pozemku" },
+      { label: "Voda", value: "Obecní vodovod" },
+      { label: "Kanalizace", value: "Možnost napojení" },
+      { label: "Plyn", value: "V dosahu" },
+      { label: "Přístup", value: "Zpevněná komunikace" },
+      { label: "Územní plán", value: "Bydlení venkovské" },
+      { label: "Vlastnictví", value: "Osobní" },
+    ],
+    description: [
+      "Nabízíme k prodeji rozlehlý rovinatý stavební pozemek o výměře 4 190 m² v klidné obci Kladruby u Vlašimi, ideální pro stavbu rodinného domu i s velkou zahradou.",
+      "Pozemek je orientovaný na jih a nabízí tak vynikající podmínky pro moderní energeticky úsporný dům. Inženýrské sítě (elektřina, obecní vodovod) jsou dostupné na hranici pozemku, s možností napojení na kanalizaci.",
+      "Lokalita je vhodná pro klidné bydlení na venkově s dobrou dostupností do Vlašimi i Benešova. Dle platného územního plánu je pozemek určen k venkovskému bydlení. Ideální investiční i rezidenční příležitost.",
+    ],
+  },
+]
+
+export function getProperty(slug: string): Property | undefined {
+  return properties.find((property) => property.slug === slug)
+}
